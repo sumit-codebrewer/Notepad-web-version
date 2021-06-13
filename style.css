@@ -2,6 +2,12 @@
     font-family: Ubuntu;
 }
 
+#mainHeading{
+  position: absolute;
+  left:70px;
+  bottom: 555px;
+}
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -68,7 +74,7 @@
 
 
 #snackbar.show {
-    visibility:visible;
+    visibility: visible;
     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
