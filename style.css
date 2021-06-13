@@ -2,10 +2,16 @@
     font-family: Ubuntu;
 }
 
-#mainHeading{
-  position: absolute;
-  left:70px;
-  bottom: 555px;
+.mainHeading{
+  font-size: 2.0rem;
+  font-weight: bold;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.logo{
+  margin-top: 35px;
+  display: inline;
 }
 
 .sidenav {
