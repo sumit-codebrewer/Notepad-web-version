@@ -1,30 +1,19 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Notepad-Web - a web version of Notepad 2.0</title>
-    <meta name="description" content="This is a online notepad application, with basic editing features. Great for making quick small notes when working.Can be opened from the dekstop version of Notepad.">
+    <title>Notepad 2.0 Web</title>
+    <meta name="description" content="This is a online notepad application, with basic editing features. Great for making quick small notes when working.Can be opened from the desktop version of Notepad.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@1.7.1/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="img/manifest.json">
     <meta name="msapplication-TileColor" content="#06adfb">
     <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
@@ -33,7 +22,8 @@
 
 <body>
     <div style="margin-bottom: 4px;">
-        <img height="50" src="img/notepdlogo.svg">
+        <img class="logo" height="50" src="img/logo.png">
+        <h1 id="mainHeading">Notepad 2.0 Web</h1>
         <span onclick="openNav()" class="sideBar"><i class='bx bx-menu'></i></span>
     </div>
     <div id="toolbar">
@@ -70,8 +60,7 @@
     <div id="editor" style="height: 80vh"></div>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a>This is just a online notepad, does nothing much</a>
-        <a href="https://quilljs.com/docs/quickstart/" target="_blank">Built using QuillJS</a>
+        <a>This is a online notepad application created using QuillJS by <a href="https://github.com/sumit-codebrewer" >Sumit-Codebrewer</a></a>
     </div>
     <div id="snackbar">Text copied to clipboard</div>
     <!-- JS START -->
