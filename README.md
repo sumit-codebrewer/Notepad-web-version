@@ -4,7 +4,6 @@ This is a web version of Notepad created using HTML, CSS, Javascript and jQuery.
 <br/>
 <img src="img/main.png" alt="Prototype">
 
-
 ## Features
 <li>Styling – The user can make the text Bold, Itallic or Underlined.
 <li>Headings – The user can define headings in his files
