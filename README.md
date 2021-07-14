@@ -1,6 +1,7 @@
 # Notepad-web-version
 This is a web version of Notepad created using HTML, CSS, Javascript and jQuery. This will be added as a dual platform feature in Notepad 2.0.
 
+
 <br/>
 <img src="img/main.png" alt="Prototype">
 
