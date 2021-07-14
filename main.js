@@ -1,5 +1,5 @@
-    var text;
-    var quill = new Quill('#editor', {
+    let text;
+    let quill = new Quill('#editor', {
         modules: {
             toolbar: '#toolbar'
         },
@@ -16,16 +16,16 @@
     }
 
     $("#copyText").click(function() {
-        text = quill.getText();
+        text = getSelectionText();
         console.log(text);
         copyToClipboard(text);
-        var x = document.getElementById("snackbar");
+        let x = document.getElementById("snackbar");
         x.className = "show";
         setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
     });
 
     $("#shareWaText").click(function() {
-        var textShare = quill.getText();
+        let textShare = quill.getText();
         window.open("https://wa.me/?text=" + encodeURI(textShare))
     });
 
@@ -35,7 +35,7 @@
     // });
 
     $("#downloadText").click(function() {
-        var text = quill.getText(),
+        let text = quill.getText(),
             blob = new Blob([text], { type: 'text/plain' }),
             anchor = document.createElement('a');
         anchor.download = "note.txt";
@@ -45,9 +45,19 @@
     });
 
     function copyToClipboard(element) {
-        var $temp = $("<input>");
+        let $temp = $("<input>");
         $("body").append($temp);
         $temp.val(element).select();
         document.execCommand("copy");
         $temp.remove();
+    }
+
+    function getSelectionText() {
+        let text = "";
+        if (window.getSelection) {
+            text = window.getSelection().toString();
+        } else if (document.selection && document.selection.type != "Control") {
+            text = document.selection.createRange().text;
+        }
+        return text;
     }
